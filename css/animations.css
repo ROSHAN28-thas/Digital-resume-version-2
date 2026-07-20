@@ -1,0 +1,526 @@
+/*==================================================
+                ANIMATIONS.CSS
+        Premium Portfolio Animations
+==================================================*/
+
+
+/*=========================================
+        FLOATING PROFILE IMAGE
+=========================================*/
+
+@keyframes floatingImage{
+
+    0%{
+
+        transform:translateY(0px);
+
+    }
+
+    50%{
+
+        transform:translateY(-15px);
+
+    }
+
+    100%{
+
+        transform:translateY(0px);
+
+    }
+
+}
+
+
+/*=========================================
+        ROTATING DASHED RING
+=========================================*/
+
+@keyframes rotateRing{
+
+    from{
+
+        transform:rotate(0deg);
+
+    }
+
+    to{
+
+        transform:rotate(360deg);
+
+    }
+
+}
+
+
+/*=========================================
+        BACKGROUND BLOBS
+=========================================*/
+
+@keyframes floatBlob{
+
+    0%{
+
+        transform:translate(0,0) scale(1);
+
+    }
+
+    50%{
+
+        transform:translate(30px,-20px) scale(1.08);
+
+    }
+
+    100%{
+
+        transform:translate(0,0) scale(1);
+
+    }
+
+}
+
+
+/*=========================================
+            FADE UP
+=========================================*/
+
+@keyframes fadeUp{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(50px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+
+/*=========================================
+            FADE DOWN
+=========================================*/
+
+@keyframes fadeDown{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(-40px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+
+/*=========================================
+            SLIDE LEFT
+=========================================*/
+
+@keyframes slideLeft{
+
+    from{
+
+        opacity:0;
+
+        transform:translateX(70px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateX(0);
+
+    }
+
+}
+
+
+/*=========================================
+            SLIDE RIGHT
+=========================================*/
+
+@keyframes slideRight{
+
+    from{
+
+        opacity:0;
+
+        transform:translateX(-70px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateX(0);
+
+    }
+
+}
+
+
+/*=========================================
+            ZOOM IN
+=========================================*/
+
+@keyframes zoomIn{
+
+    from{
+
+        opacity:0;
+
+        transform:scale(.8);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:scale(1);
+
+    }
+
+}
+
+
+/*=========================================
+            POP
+=========================================*/
+
+@keyframes pop{
+
+    0%{
+
+        transform:scale(.7);
+
+        opacity:0;
+
+    }
+
+    80%{
+
+        transform:scale(1.08);
+
+    }
+
+    100%{
+
+        transform:scale(1);
+
+        opacity:1;
+
+    }
+
+}
+
+
+/*=========================================
+            SHIMMER
+=========================================*/
+
+@keyframes shimmer{
+
+    0%{
+
+        background-position:-400px 0;
+
+    }
+
+    100%{
+
+        background-position:400px 0;
+
+    }
+
+}
+
+
+/*=========================================
+        SCROLL REVEAL CLASSES
+=========================================*/
+
+.reveal{
+
+    opacity:0;
+
+    transform:translateY(60px);
+
+    transition:all .8s ease;
+
+}
+
+.reveal.active{
+
+    opacity:1;
+
+    transform:translateY(0);
+
+}
+
+
+/*=========================================
+        DIRECTIONAL REVEALS
+=========================================*/
+
+.reveal-left{
+
+    opacity:0;
+
+    transform:translateX(-60px);
+
+    transition:all .8s ease;
+
+}
+
+.reveal-left.active{
+
+    opacity:1;
+
+    transform:translateX(0);
+
+}
+
+.reveal-right{
+
+    opacity:0;
+
+    transform:translateX(60px);
+
+    transition:all .8s ease;
+
+}
+
+.reveal-right.active{
+
+    opacity:1;
+
+    transform:translateX(0);
+
+}
+
+
+/*=========================================
+            HERO CONTENT
+=========================================*/
+
+.hero-content{
+
+    animation:slideRight 1s ease forwards;
+
+}
+
+.hero-image{
+
+    animation:slideLeft 1s ease forwards;
+
+}
+
+
+/*=========================================
+        SECTION TITLES
+=========================================*/
+
+.section-title{
+
+    animation:fadeDown .8s ease both;
+
+}
+
+
+/*=========================================
+        CARD HOVER
+=========================================*/
+
+.skill-card,
+
+.project-card,
+
+.timeline-item,
+
+.certificate-card,
+
+.achievement-card,
+
+.about-card{
+
+    transition:
+        transform .35s ease,
+        box-shadow .35s ease;
+
+}
+
+.skill-card:hover,
+
+.project-card:hover,
+
+.timeline-item:hover,
+
+.certificate-card:hover,
+
+.achievement-card:hover,
+
+.about-card:hover{
+
+    transform:translateY(-10px);
+
+}
+
+
+/*=========================================
+        ICON HOVER
+=========================================*/
+
+.social-icons a{
+
+    transition:
+        transform .35s ease,
+        background .35s ease;
+
+}
+
+.social-icons a:hover{
+
+    transform:translateY(-8px) rotate(8deg);
+
+}
+
+
+/*=========================================
+        BUTTON RIPPLE EFFECT
+=========================================*/
+
+.btn{
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+.btn::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:0;
+
+    height:0;
+
+    border-radius:50%;
+
+    background:rgba(255,255,255,.35);
+
+    top:50%;
+
+    left:50%;
+
+    transform:translate(-50%,-50%);
+
+    transition:.6s;
+
+}
+
+.btn:hover::before{
+
+    width:300px;
+
+    height:300px;
+
+}
+
+
+/*=========================================
+        IMAGE ZOOM
+=========================================*/
+
+.project-card img{
+
+    transition:transform .5s ease;
+
+}
+
+.project-card:hover img{
+
+    transform:scale(1.08);
+
+}
+
+
+/*=========================================
+        LINK UNDERLINE
+=========================================*/
+
+.nav-links a{
+
+    transition:color .3s ease;
+
+}
+
+
+/*=========================================
+        BACK TO TOP
+=========================================*/
+
+#backToTop{
+
+    transition:
+
+        opacity .4s,
+
+        transform .4s,
+
+        background .3s;
+
+}
+
+
+/*=========================================
+        SMOOTH PAGE LOAD
+=========================================*/
+
+body{
+
+    animation:fadeUp .7s ease;
+
+}
+
+
+/*=========================================
+        REDUCE MOTION SUPPORT
+=========================================*/
+
+@media (prefers-reduced-motion: reduce){
+
+    *{
+
+        animation:none !important;
+
+        transition:none !important;
+
+        scroll-behavior:auto !important;
+
+    }
+
+}
